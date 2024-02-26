@@ -11,8 +11,8 @@ export class SignupComponent {
   isSpinning: boolean = false;
   signUpForm!: FormGroup;
 
-  constructor(private fb: FormBuilder
-    private authService: AuthService) {}
+  constructor(private fb: FormBuilder,
+    private authService:AuthService ) { }
 
   ngOnInit(){
     this.signUpForm = this.fb.group({
@@ -42,7 +42,7 @@ export class SignupComponent {
     
     })
    }
-   
+
 }
 
 
