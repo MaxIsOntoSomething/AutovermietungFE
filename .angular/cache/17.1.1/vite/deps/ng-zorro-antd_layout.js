@@ -1,4 +1,9 @@
 import {
+  NavigationEnd,
+  Router,
+  RouterLink
+} from "./chunk-V34KNP7G.js";
+import {
   CdkConnectedOverlay,
   CdkOverlayOrigin,
   NzNoAnimationDirective,
@@ -17,11 +22,6 @@ import {
   NzBreakpointService,
   siderResponsiveMap
 } from "./chunk-BARIIWBQ.js";
-import {
-  NavigationEnd,
-  Router,
-  RouterLink
-} from "./chunk-V34KNP7G.js";
 import {
   NzIconDirective,
   NzIconModule

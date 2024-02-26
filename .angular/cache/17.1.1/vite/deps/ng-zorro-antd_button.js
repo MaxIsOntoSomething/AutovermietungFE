@@ -1,4 +1,7 @@
 import {
+  NzTransitionPatchModule
+} from "./chunk-5RR7H5RK.js";
+import {
   NzWaveModule
 } from "./chunk-Y33FPXV6.js";
 import {
@@ -19,9 +22,6 @@ import {
 import "./chunk-3L5WFRCL.js";
 import "./chunk-NMGCZH7J.js";
 import "./chunk-U2FYBNHD.js";
-import {
-  NzTransitionPatchModule
-} from "./chunk-5RR7H5RK.js";
 import "./chunk-LTJWIDXF.js";
 import {
   ChangeDetectionStrategy,
