@@ -1,4 +1,9 @@
 import {
+  NzNoAnimationDirective,
+  POSITION_MAP,
+  getPlacementName
+} from "./chunk-2GFX4CHR.js";
+import {
   NavigationEnd,
   Router,
   RouterLink
@@ -6,14 +11,11 @@ import {
 import {
   CdkConnectedOverlay,
   CdkOverlayOrigin,
-  NzNoAnimationDirective,
   OverlayModule,
-  POSITION_MAP,
   collapseMotion,
-  getPlacementName,
   slideMotion,
   zoomBigMotion
-} from "./chunk-K2BQKEPB.js";
+} from "./chunk-W7MNKJOA.js";
 import {
   NzOutletModule,
   NzStringTemplateOutletDirective
@@ -21,7 +23,7 @@ import {
 import {
   NzBreakpointService,
   siderResponsiveMap
-} from "./chunk-BARIIWBQ.js";
+} from "./chunk-PKIKOE5C.js";
 import {
   NzIconDirective,
   NzIconModule
@@ -38,7 +40,8 @@ import {
   inNextTick,
   toCssPixel
 } from "./chunk-FOC5IRSH.js";
-import "./chunk-3L5WFRCL.js";
+import "./chunk-Q6QBSXGO.js";
+import "./chunk-ALTSFP6M.js";
 import "./chunk-NMGCZH7J.js";
 import "./chunk-U2FYBNHD.js";
 import {

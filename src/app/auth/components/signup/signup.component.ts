@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from "@angular/forms";
 import { AuthService } from '../../services/auth/auth.service';
+import {NzMessageService} from "ng-zorro-antd/message";
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,8 @@ export class SignupComponent {
   signUpForm!: FormGroup;
 
   constructor(private fb: FormBuilder,
-    private authService:AuthService ) { }
+    private authService:AuthService, 
+    private message: NzMessageService, ) { }
 
   ngOnInit(){
     this.signUpForm = this.fb.group({

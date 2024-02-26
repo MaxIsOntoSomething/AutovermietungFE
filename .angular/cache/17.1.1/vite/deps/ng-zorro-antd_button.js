@@ -1,7 +1,4 @@
 import {
-  NzTransitionPatchModule
-} from "./chunk-5RR7H5RK.js";
-import {
   NzWaveModule
 } from "./chunk-Y33FPXV6.js";
 import {
@@ -19,10 +16,14 @@ import {
 import {
   InputBoolean
 } from "./chunk-FOC5IRSH.js";
-import "./chunk-3L5WFRCL.js";
+import "./chunk-Q6QBSXGO.js";
+import "./chunk-ALTSFP6M.js";
 import "./chunk-NMGCZH7J.js";
 import "./chunk-U2FYBNHD.js";
 import "./chunk-LTJWIDXF.js";
+import {
+  NzTransitionPatchModule
+} from "./chunk-5RR7H5RK.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,

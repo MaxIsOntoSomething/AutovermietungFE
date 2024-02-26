@@ -772,9 +772,10 @@ export {
   MediaMatcher,
   BreakpointObserver,
   NzResizeService,
+  NzSingletonService,
   gridResponsiveMap,
   siderResponsiveMap,
   NzBreakpointService,
   NzDestroyService
 };
-//# sourceMappingURL=chunk-BARIIWBQ.js.map
+//# sourceMappingURL=chunk-PKIKOE5C.js.map
