@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from "@angular/forms";
 import { AuthService } from '../../services/auth/auth.service';
 import {NzMessageService} from "ng-zorro-antd/message";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -14,8 +15,9 @@ export class SignupComponent {
 
   constructor(private fb: FormBuilder,
     private authService:AuthService, 
-    private message: NzMessageService, ) { }
-
+    private message: NzMessageService, 
+    private router:Router) { }
+    
   ngOnInit(){
     this.signUpForm = this.fb.group({
       name: [null, [Validators.required]],
@@ -37,13 +39,16 @@ export class SignupComponent {
 
   register(){
     console.log(this.signUpForm.value);
-    this.authService.register(this.signUpForm.value).subscribe((res) => {
+    this.authService.register(this.signUpForm.value).subscribe((res: any) => { // Update the type of 'res' to 'any'
       console.log(res);
-    
-    
-    
+      if(res.id != null){
+        this.message.success("Signup successful", {nzDuration: 5000});
+        this.router.navigateByUrl('/login');
+      } else { 
+        this.message.error("Signup failed", {nzDuration: 5000});
+      }
     })
-   }
+  }
 
 }
 
