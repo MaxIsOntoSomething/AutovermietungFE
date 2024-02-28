@@ -9,14 +9,14 @@
           </div>
           <form nz-form [formGroup]="loginForm">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Please Input your Email">
+              <nz-form-control nzErrorTip="Email eingeben">
                 <nz-input-group nzPrefixIcon="user">
                   <input type="text" nz-input placeholder="Email" formControlName="email" />
                 </nz-input-group>
               </nz-form-control>
             </nz-form-item>
             <nz-form-item>
-              <nz-form-control nzErrorTip="Please Input your Password">
+              <nz-form-control nzErrorTip="Passwort eingeben">
                 <nz-input-group nzPrefixIcon="lock">
                   <input type="password" nz-input placeholder="Password" formControlName="password" />
                 </nz-input-group>
@@ -24,7 +24,7 @@
             </nz-form-item>
             <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" 
             (click)="login()"[disabled]="loginForm.invalid">Log in</button>
-            or  <a routerLink="/register"> register now</a>
+            or  <a routerLink="/register"> Registrieren</a>
           </form>
         </div>
       </div>

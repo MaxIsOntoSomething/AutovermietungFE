@@ -8,7 +8,7 @@
         <form nz-form [formGroup]="signUpForm">
 
           <nz-form-item>
-            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid E-mail!">
+            <nz-form-control nzHasFeedback nzErrorTip="Keine Gültige Email Adresse">
               <input nz-input placeholder="E-mail" formControlName="email" id="email"/>
             </nz-form-control>
           </nz-form-item>
@@ -17,11 +17,11 @@
               <input nz-input placeholder="Password" type="password" id="password" formControlName="password" />
               <ng-template #errorPass let-control>
                 <ng-container *ngIf="control.hasError('required')">
-                  Password Is Required!
+                  Passwort ist erforderlich
                 </ng-container>
                 <ng-container *ngIf="control.hasError('pattern')">
-                  Password Should Conatins 8 Characters,1 Lowercase, 1 Uppercase, 1 Number and 1 Special character
-                </ng-container>
+                    Das Passwort sollte 8 Zeichen, 1 Kleinbuchstaben, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen enthalten
+                  </ng-container>
               </ng-template>
             </nz-form-control>
           </nz-form-item>
@@ -30,10 +30,10 @@
               <input nz-input type="password" placeholder="Confirm Password" formControlName="checkPassword" id="checkPassword" />
               <ng-template #errorTpl let-control>
                 <ng-container *ngIf="control.hasError('required')">
-                  Please confirm your password!
+                  Passwort bestätigen
                 </ng-container>
                 <ng-container *ngIf="control.hasError('confirm')">
-                  Two passwords that you enter is inconsistent!
+                  Passwörter stimmen nicht überein
                 </ng-container>
               </ng-template>
             </nz-form-control>
@@ -44,7 +44,7 @@
               <input nz-input placeholder="Name" id="username" formControlName="name" />
               <ng-template #userErrorTpl let-control>
                 <ng-container *ngIf="control.hasError('required')">
-                  Please input your username!
+                  Bitte Benutzername eingeben
                 </ng-container>
 
               </ng-template>
@@ -58,7 +58,7 @@
             </nz-form-control>
           </nz-form-item> -->
           <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="register()" [disabled]="signUpForm.invalid">Register</button>
-          Or <a routerLink="/login"> login now! </a>
+          Or <a routerLink="/login"> Einloggen </a>
         </form>
       </div>
     </div>
