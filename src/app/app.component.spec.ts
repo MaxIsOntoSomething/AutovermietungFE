@@ -27,9 +27,15 @@ describe('AppComponent', () => {
   });
 
   it('should render title', () => {
+    /**
+     * Dies ist eine Testdatei für das AppComponent-Modul.
+     */
+    /**
+     * Erstellt eine Komponenteninstanz für die AppComponent.
+     */
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Autovermietung');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hallo, Autovermietung');
   });
 });
