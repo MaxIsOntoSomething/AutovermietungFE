@@ -3,7 +3,7 @@
     <div class="parent">
       <div class="child">
         <div nz-row class="imgDiv">
-          <div nz-col nzSpan="24"><h1 style="margin-left: 80px;">Sign Up</h1></div>
+          <div nz-col nzSpan="24"><h1 style="margin-left: 80px;">Registrieren</h1></div>
         </div>
         <form nz-form [formGroup]="signUpForm">
 
@@ -57,7 +57,7 @@
               <button nz-button nzType="primary">Register</button>
             </nz-form-control>
           </nz-form-item> -->
-          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="register()" [disabled]="signUpForm.invalid">Register</button>
+          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="register()" [disabled]="signUpForm.invalid">Registrieren</button>
           Or <a routerLink="/login"> Einloggen </a>
         </form>
       </div>
