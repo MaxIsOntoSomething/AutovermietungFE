@@ -1,7 +1,7 @@
 import {
   NzIconDirective,
   NzIconModule
-} from "./chunk-ZXAQQFBE.js";
+} from "./chunk-PQLUDPFX.js";
 import {
   CommonModule,
   NgIf
@@ -188,4 +188,4 @@ export {
   NzFormItemFeedbackIconComponent,
   NzFormPatchModule
 };
-//# sourceMappingURL=chunk-JTTDGKKX.js.map
+//# sourceMappingURL=chunk-BIWWBHTE.js.map

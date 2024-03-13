@@ -19,4 +19,16 @@ export class AuthService {
     // Sendet eine POST-Anfrage an die angegebene URL mit den übergebenen Daten
     return this.htpp.post(BASE_URL + '/api/auth/signup', signuprequest);
   }
+
+login (loginrequest:any):Observable<any>{
+  return this.htpp.post(BASE_URL + '/api/auth/login', loginrequest);
+
+
+
+
+}
+
+
+
+  
 }

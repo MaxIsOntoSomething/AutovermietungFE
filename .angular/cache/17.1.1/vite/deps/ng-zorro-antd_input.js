@@ -3,7 +3,7 @@ import {
   NzFormNoStatusService,
   NzFormPatchModule,
   NzFormStatusService
-} from "./chunk-JTTDGKKX.js";
+} from "./chunk-BIWWBHTE.js";
 import {
   NgControl
 } from "./chunk-JHUXTIF7.js";
@@ -19,18 +19,11 @@ import {
 import {
   BreakpointObserver,
   NzResizeService
-} from "./chunk-PKIKOE5C.js";
+} from "./chunk-AJRAB25P.js";
 import {
   NzIconDirective,
   NzIconModule
-} from "./chunk-ZXAQQFBE.js";
-import {
-  Platform,
-  _getEventTarget,
-  _getFocusedElementPierceShadowDom,
-  _getShadowRoot,
-  normalizePassiveListenerOptions
-} from "./chunk-LPTNA3PJ.js";
+} from "./chunk-PQLUDPFX.js";
 import "./chunk-WIH324N5.js";
 import {
   Directionality
@@ -42,6 +35,13 @@ import {
   getStatusClassNames,
   isNotNil
 } from "./chunk-FOC5IRSH.js";
+import {
+  Platform,
+  _getEventTarget,
+  _getFocusedElementPierceShadowDom,
+  _getShadowRoot,
+  normalizePassiveListenerOptions
+} from "./chunk-LPTNA3PJ.js";
 import "./chunk-NMGCZH7J.js";
 import "./chunk-U2FYBNHD.js";
 import {

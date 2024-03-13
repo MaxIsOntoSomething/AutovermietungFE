@@ -1,11 +1,7 @@
 import {
-  NzWaveModule
-} from "./chunk-Y33FPXV6.js";
-import {
   NzIconDirective,
   NzIconModule
-} from "./chunk-ZXAQQFBE.js";
-import "./chunk-LPTNA3PJ.js";
+} from "./chunk-PQLUDPFX.js";
 import {
   NzConfigService,
   WithConfig
@@ -16,14 +12,18 @@ import {
 import {
   InputBoolean
 } from "./chunk-FOC5IRSH.js";
+import {
+  NzTransitionPatchModule
+} from "./chunk-5RR7H5RK.js";
+import {
+  NzWaveModule
+} from "./chunk-Y33FPXV6.js";
+import "./chunk-LPTNA3PJ.js";
 import "./chunk-Q6QBSXGO.js";
 import "./chunk-ALTSFP6M.js";
 import "./chunk-NMGCZH7J.js";
 import "./chunk-U2FYBNHD.js";
 import "./chunk-LTJWIDXF.js";
-import {
-  NzTransitionPatchModule
-} from "./chunk-5RR7H5RK.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,

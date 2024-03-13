@@ -1,7 +1,4 @@
 import {
-  Platform
-} from "./chunk-LPTNA3PJ.js";
-import {
   NzConfigService,
   inputToRGB,
   rgbToHex,
@@ -11,6 +8,9 @@ import {
   InputBoolean,
   warn
 } from "./chunk-FOC5IRSH.js";
+import {
+  Platform
+} from "./chunk-LPTNA3PJ.js";
 import {
   DomSanitizer
 } from "./chunk-NMGCZH7J.js";
@@ -1366,4 +1366,4 @@ export {
   NzIconDirective,
   NzIconModule
 };
-//# sourceMappingURL=chunk-ZXAQQFBE.js.map
+//# sourceMappingURL=chunk-PQLUDPFX.js.map

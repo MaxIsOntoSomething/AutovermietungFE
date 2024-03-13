@@ -1,12 +1,12 @@
 import {
-  Platform
-} from "./chunk-LPTNA3PJ.js";
-import {
   coerceArray,
   environment,
   getEventPosition,
   isTouchEvent
 } from "./chunk-FOC5IRSH.js";
+import {
+  Platform
+} from "./chunk-LPTNA3PJ.js";
 import {
   DOCUMENT
 } from "./chunk-LTJWIDXF.js";
@@ -778,4 +778,4 @@ export {
   NzBreakpointService,
   NzDestroyService
 };
-//# sourceMappingURL=chunk-PKIKOE5C.js.map
+//# sourceMappingURL=chunk-AJRAB25P.js.map
