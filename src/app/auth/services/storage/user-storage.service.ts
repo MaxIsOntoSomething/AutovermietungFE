@@ -27,8 +27,9 @@ export class UserStorageService {
     return true;
   }
 
+  
   static getToken(): string {
-    return localStorage.getItem(TOKEN);
+    return localStorage.getItem(TOKEN) as string;
   }
 
   static getUser(): any {
