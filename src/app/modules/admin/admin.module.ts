@@ -7,7 +7,7 @@ import { AddCarComponent } from './components/add-car/add-car.component';
 import { UpdateCarComponent } from './components/update-car/update-car.component';
 import { SearchCarComponent } from './components/search-car/search-car.component';
 import { GetBookingsComponent } from './components/get-bookings/get-bookings.component';
-import { DemoNgZorroAntdModule } from 'src/app/DemoNgZorroAntdModule';
+import { DemoNgZorroAntdModule } from '../../DemoNgZorroAntdModule';
 
 
 @NgModule({

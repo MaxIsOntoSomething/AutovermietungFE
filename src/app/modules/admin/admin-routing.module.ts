@@ -5,7 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchCarComponent } from './components/search-car/search-car.component';
 import { UpdateCarComponent } from './components/update-car/update-car.component';
 import { GetBookingsComponent } from './components/get-bookings/get-bookings.component';
-import { AdminGuard } from 'src/app/auth/guards/authAdmin/admin.guard';
+import { AdminGuard } from "../../auth/guards/authAdmin/admin.guard";
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AdminGuard] },

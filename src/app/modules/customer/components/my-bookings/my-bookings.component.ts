@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NzButtonSize } from 'ng-zorro-antd/button';
-import { CustomerService } from '../../services/customer.service';
+import { CustomerService } from "../../../customer/service/customer.service"
 
 @Component({
   selector: 'app-my-bookings',

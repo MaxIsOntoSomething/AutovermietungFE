@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../../admin-services/admin.service';
+import { AdminService } from "../../admin-services/admin.service"
 import { NzButtonSize } from 'ng-zorro-antd/button';
 import { NzMessageService } from 'ng-zorro-antd/message';
 

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NzButtonSize } from 'ng-zorro-antd/button';
-import { UserStorageService } from 'src/app/auth/services/storage/user-storage.service';
+import { UserStorageService } from "../../../../auth/services/storage/user-storage.service"
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { CustomerService } from '../../services/customer.service';
+import { CustomerService } from "../../../customer/service/customer.service"
 
 @Component({
   selector: 'app-book-car',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { NzButtonSize } from 'ng-zorro-antd/button';
-import { CustomerService } from '../../services/customer.service';
+import { CustomerService } from "../../../customer/service/customer.service"
 
 @Component({
   selector: 'app-search-car',
