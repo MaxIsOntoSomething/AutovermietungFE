@@ -1,16 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { StorageService } from './user.storage.service';
+import { UserStorageService } from './user-storage.service';
 
-describe('StorageService', () => {
-  /**
-   * Der StorageService ist eine Service-Klasse, die Methoden zum Speichern und Abrufen von Daten im lokalen Speicher bereitstellt.
-   */
-  let service: StorageService;
+describe('UserStorageService', () => {
+  let service: UserStorageService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(StorageService);
+    service = TestBed.inject(UserStorageService);
   });
 
   it('should be created', () => {
