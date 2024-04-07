@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
+import { StorageService } from '../../services/storage/storage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,9 +26,23 @@ export class LoginComponent {
     console.log(this.loginForm.value);
     this.authService.login(this.loginForm.value).subscribe((res)=>{
       console.log(res);
-    }
+      if(res.userId != null){
+        const user = {
+          id: res.userId,
+          role:res.userRole
+        }
+        StorageService.saveUser(user);
+        StorageService.saveToken(res.jwt);
 
-    )}
+
+
+      }
+
+
+
+
+    });
+  }
 
 
 }
