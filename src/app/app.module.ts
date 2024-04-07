@@ -10,7 +10,7 @@ import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DemoNgZorroAntdModule } from './DemoNgZorroAntdModule';
+import { DemoNgZorroAntdModule } from "./DemoNgZorroAntdModule;
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 
