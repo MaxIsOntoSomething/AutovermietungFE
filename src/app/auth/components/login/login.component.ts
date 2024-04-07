@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../services/auth/auth.service';
-import { StorageService } from '../../services/storage/storage.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth/auth.service';
+import { UserStorageService } from '../services/storage/user-storage.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
-// import { UserStorageService } from '../services/storage/user-storage.service';
-// 
-
 
 @Component({
   selector: 'app-login',
@@ -29,11 +26,11 @@ export class LoginComponent implements OnInit {
             role: res.userRole
           }
           console.log(user);
-          StorageService.saveUser(user);
-          StorageService.saveToken(res.jwt);
-          if (StorageService.isAdminLoggedIn()) {
+          UserStorageService.saveUser(user);
+          UserStorageService.saveToken(res.jwt);
+          if (UserStorageService.isAdminLoggedIn()) {
             this.router.navigateByUrl('admin/dashboard');
-          } else if (StorageService.isCustomerLoggedIn()) {
+          } else if (UserStorageService.isCustomerLoggedIn()) {
             this.router.navigateByUrl('customer/dashboard');
           }
         } else {
@@ -59,6 +56,4 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-  
 }
