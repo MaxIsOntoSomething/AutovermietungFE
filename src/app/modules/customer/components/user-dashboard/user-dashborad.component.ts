@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from '../../services/customer.service';
+import { CustomerService } from "../../../customer/service/customer.service"
 
 @Component({
   selector: 'app-user-dashborad',

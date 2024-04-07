@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, of, tap } from 'rxjs';
-import { environment } from '../environments/environment';
+import { environment } from "../../../../environments/environment"
 import { UserStorageService } from '../storage/user-storage.service';
 
 const BASIC_URL = environment['BASIC_URL'];

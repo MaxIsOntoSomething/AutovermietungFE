@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomerGuard } from 'src/app/auth/guards/authCustomer/customer.guard';
+import { CustomerGuard } from "../../auth/guards/authCustomer/customer.guard";
 import { BookCarComponent } from './components/book-car/book-car.component';
 import { MyBookingsComponent } from './components/my-bookings/my-bookings.component';
 import { SearchCarComponent } from './components/search-car/search-car.component';
-import { UserDashboradComponent } from './components/user-dashborad/user-dashborad.component';
+import { UserDashboradComponent } from "../../modules/customer/components/user-dashboard/user-dashborad.component";
 
 const routes: Routes = [
   { path: 'dashboard', component: UserDashboradComponent, canActivate: [CustomerGuard] },
