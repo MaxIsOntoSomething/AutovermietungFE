@@ -20,22 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Autovermietung'`, () => {
+  it(`should have as title 'lets-go-web'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Autovermietung');
+    expect(app.title).toEqual('lets-go-web');
   });
 
   it('should render title', () => {
-    /**
-     * Dies ist eine Testdatei für das AppComponent-Modul.
-     */
-    /**
-     * Erstellt eine Komponenteninstanz für die AppComponent.
-     */
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hallo, Autovermietung');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('lets-go-web app is running!');
   });
 });
