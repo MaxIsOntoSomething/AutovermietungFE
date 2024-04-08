@@ -10,7 +10,7 @@ import { CustomerService } from "../../../customer/service/customer.service"
 export class MyBookingsComponent implements OnInit {
 
   size: NzButtonSize = 'large';
-  isSpinning: boolean;
+  isSpinning!: boolean;
   bookedCars: any
 
   constructor(private customerService: CustomerService) { }
