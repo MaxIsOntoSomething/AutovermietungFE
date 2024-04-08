@@ -12,8 +12,8 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 export class AddCarComponent implements OnInit {
 
   validateForm!: FormGroup;
-  selectedFile: File | null;
-  imagePreview: string | ArrayBuffer | null;
+  selectedFile!: File | null;
+  imagePreview!: string | ArrayBuffer | null;
   isSpinning = false;
   listOfOption: Array<{ label: string; value: string }> = [];
   listOfBrands = ["BMW", "AUDI", "FERRARI", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];

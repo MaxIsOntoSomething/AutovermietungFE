@@ -36,7 +36,7 @@ export class AdminService {
       );
   }
 
-  getCarByCarId(carId): Observable<any> {
+  getCarByCarId(carId:any): Observable<any> {
     return this.http
       .get<[]>(BASIC_URL + `api/admin/car/${carId}`, {
         headers: this.createAuthorizationHeader(),
