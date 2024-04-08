@@ -16,10 +16,10 @@ export class AddCarComponent implements OnInit {
   imagePreview!: string | ArrayBuffer | null;
   isSpinning = false;
   listOfOption: Array<{ label: string; value: string }> = [];
-  listOfBrands = ["BMW", "AUDI", "FERRARI", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
-  listOfType = ["Petrol", "Hybrid", "Diesel", "Electric", "CNG"];
-  listOfColor = ["Red", "White", "Blue", "Black", "Orange", "Grey", "Silver"];
-  listOfTransmission = ["Manual", "Automatic"];
+  listOfBrands = ["BMW", "AUDI", "FERRARI", "PORSCHE", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
+  listOfType = ["Benzin", "Hybrid", "Diesel", "Elektro", "Wasserstoff"];
+  listOfColor = ["Rot", "Weiß", "Blau", "Schwarz", "Orange", "Grau", "Silber", "Gelb", "Grün"];
+  listOfTransmission = ["Schaltgetriebe", "Automatik"];
 
   constructor(private fb: FormBuilder,
     private message: NzMessageService,
@@ -88,7 +88,7 @@ export class AddCarComponent implements OnInit {
   }
  }
 }
- 
+
 
 
 

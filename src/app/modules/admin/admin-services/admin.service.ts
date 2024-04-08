@@ -83,7 +83,7 @@ export class AdminService {
 
   getBookings(): Observable<any> {
     return this.http
-      .get<[]>(BASIC_URL + `api/admin/bookings`, {
+      .get<[]>(BASIC_URL + `api/admin/car/bookings`, {
         headers: this.createAuthorizationHeader(),
       })
       .pipe(
@@ -94,7 +94,7 @@ export class AdminService {
 
   changeBookingStatus(bookingId: number, status: string): Observable<any> {
     return this.http
-      .get<[]>(BASIC_URL + `api/admin/booking/${bookingId}/${status}`, {
+      .get<[]>(BASIC_URL + `api/admin/car/booking/${bookingId}/${status}`, {
         headers: this.createAuthorizationHeader(),
       })
       .pipe(

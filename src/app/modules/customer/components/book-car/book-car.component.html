@@ -14,8 +14,8 @@
                 <p>{{car.description}}</p>
 
                 <hr>
-                <h5>Price : <b>${{car.price}}</b> - Color : <b>{{car.color}}</b> - Transmission :
-                    <b>{{car.transmission}}</b> - Type : <b>{{car.type}}</b> - Year : <b>{{car.year | date: 'yyyy'}}</b>
+                <h5>Preis : <b>€{{car.price}}/Tag</b> - Farbe : <b>{{car.color}}</b> - Getriebe :
+                    <b>{{car.transmission}}</b> - Typ : <b>{{car.type}}</b> - Jahr : <b>{{car.year | date: 'yyyy'}}</b>
                 </h5>
                 <hr>
             </div>
@@ -30,29 +30,28 @@
                     <div class="filter-select-dropdown filter-fields-width">
 
                         <nz-form-item style="margin-left: 50px;">
-                            <nz-form-label [nzSpan]="0" nzFor="From Date">From Date</nz-form-label>
+                            <nz-form-label [nzSpan]="0" nzFor="From Date">Von</nz-form-label>
                             <nz-form-control [nzSpan]="0">
                                 <nz-date-picker formControlName="fromDate" style="width: 100%;"
-                                    nzPlaceHolder="From Date" name="From Date" [nzFormat]="dateFormat" id="From Date">
+                                    nzPlaceHolder="Von" name="From Date" [nzFormat]="dateFormat" id="From Date">
                                 </nz-date-picker>
                             </nz-form-control>
                         </nz-form-item>
 
                         <nz-form-item style="margin-left: 100px;">
-                            <nz-form-label [nzSpan]="0" nzFor="To Date">To Date</nz-form-label>
+                            <nz-form-label [nzSpan]="0" nzFor="To Date">Bis</nz-form-label>
                             <nz-form-control [nzSpan]="0">
-                                <nz-date-picker formControlName="toDate" style="width: 100%;" nzPlaceHolder="To Date"
+                                <nz-date-picker formControlName="toDate" style="width: 100%;" nzPlaceHolder="Bis"
                                     name="To Date" [nzFormat]="dateFormat" id="To Date">
                                 </nz-date-picker>
                             </nz-form-control>
                         </nz-form-item>
-                        
+
                     </div>
 
                     <div class="filter-select-dropdown filter-fields-width">
                         <button class="filterBtn" style="margin-left: 45px;" nz-button nzType="primary"
-                            (click)="bookCar(validateForm.value)">Book
-                            Car</button>
+                            (click)="bookCar(validateForm.value)">Auto Buchen</button>
                     </div>
                 </div>
             </form>

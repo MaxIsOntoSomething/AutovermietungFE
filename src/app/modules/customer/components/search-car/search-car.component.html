@@ -5,9 +5,9 @@
                 <div class="filter-select-dropdown filter-fields-width">
 
                     <nz-form-item>
-                        <nz-form-label nzFor="gender">Brand</nz-form-label>
-                        <nz-form-control nzErrorTip="This Input Is Required!">
-                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Brand" formControlName="brand">
+                        <nz-form-label nzFor="gender">Marke</nz-form-label>
+                        <nz-form-control nzErrorTip="Required!">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Marke wählen" formControlName="brand">
                                 <nz-option *ngFor="let brand of listOfBrands" nzLabel={{brand}}
                                     nzValue={{brand}}></nz-option>
                             </nz-select>
@@ -15,9 +15,9 @@
                     </nz-form-item>
 
                     <nz-form-item>
-                        <nz-form-label nzFor="studentClass">Type</nz-form-label>
-                        <nz-form-control nzErrorTip="This Input Is Required!">
-                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Type" formControlName="type">
+                        <nz-form-label nzFor="studentClass">Typ</nz-form-label>
+                        <nz-form-control nzErrorTip="Required!">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Typ wählen" formControlName="type">
                                 <nz-option *ngFor="let type of listOfType" nzLabel={{type}}
                                     nzValue={{type}}></nz-option>
                             </nz-select>
@@ -25,9 +25,9 @@
                     </nz-form-item>
 
                     <nz-form-item>
-                        <nz-form-label nzFor="gender">Color</nz-form-label>
-                        <nz-form-control nzErrorTip="This Input Is Required!">
-                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Color" formControlName="color">
+                        <nz-form-label nzFor="gender">Farbe</nz-form-label>
+                        <nz-form-control nzErrorTip="Required!">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Farbe wählen" formControlName="color">
                                 <nz-option *ngFor="let color of listOfColor" nzLabel={{color}}
                                     nzValue={{color}}></nz-option>
                             </nz-select>
@@ -35,9 +35,9 @@
                     </nz-form-item>
 
                     <nz-form-item>
-                        <nz-form-label nzFor="studentClass">Transmission</nz-form-label>
-                        <nz-form-control nzErrorTip="This Input Is Required!">
-                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Transmission"
+                        <nz-form-label nzFor="studentClass">Getriebe</nz-form-label>
+                        <nz-form-control nzErrorTip="Required!">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Getriebe wählen"
                                 formControlName="transmission">
                                 <nz-option *ngFor="let transmission of listOfTransmission" nzLabel={{transmission}}
                                     nzValue={{transmission}}></nz-option>
@@ -48,8 +48,7 @@
                 </div>
 
                 <div class="filter-select-dropdown filter-fields-width">
-                    <button class="filterBtn" nz-button nzType="primary" (click)="searchCar()">Search
-                        Car</button>
+                    <button class="filterBtn" nz-button nzType="primary" (click)="searchCar()">Autos suchen</button>
                 </div>
             </div>
         </div>
@@ -72,8 +71,8 @@
                 <p>{{car.description}}</p>
 
                 <hr>
-                <h5>Price : <b>${{car.price}}</b> - Color : <b>{{car.color}}</b> - Transmission :
-                    <b>{{car.transmission}}</b> - Type : <b>{{car.type}}</b> - Year : <b>{{car.year | date: 'yyyy'}}</b>
+                <h5>Preis : <b>€{{car.price}}</b> - Farbe : <b>{{car.color}}</b> - Getriebe
+                    <b>{{car.transmission}}</b> - Typ : <b>{{car.type}}</b> - Jahr : <b>{{car.year | date: 'yyyy'}}</b>
                 </h5>
                 <hr>
             </div>

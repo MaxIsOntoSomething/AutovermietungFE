@@ -4,12 +4,12 @@
             <tr>
                 <th style="font-weight: bolder; color: #003973;">Username</th>
                 <th style="font-weight: bolder; color: #003973;">Email</th>
-                <th style="font-weight: bolder; color: #003973;">From</th>
-                <th style="font-weight: bolder; color: #003973;">To</th>
-                <th style="font-weight: bolder; color: #003973;">Days</th>
-                <th style="font-weight: bolder; color: #003973;">Price</th>
+                <th style="font-weight: bolder; color: #003973;">Von</th>
+                <th style="font-weight: bolder; color: #003973;">Bis</th>
+                <th style="font-weight: bolder; color: #003973;">Tage</th>
+                <th style="font-weight: bolder; color: #003973;">Preis</th>
                 <th style="font-weight: bolder; color: #003973;">Status</th>
-                <th style="font-weight: bolder; color: #003973;">Action</th>
+                <th style="font-weight: bolder; color: #003973;">Aktion</th>
             </tr>
         </thead>
         <tbody>
@@ -30,9 +30,9 @@
 
                     <span *ngIf="booking.bookCarStatus == 'PENDING'">
                         <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary"
-                            (click)="changeBookingStatus(booking.id,'Approve')" nzDanger>Approve</button>
+                            (click)="changeBookingStatus(booking.id,'Approve')" nzDanger>Genehmingen</button>
                         <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary"
-                            (click)="changeBookingStatus(booking.id,'Reject')" nzDanger>Reject</button>
+                            (click)="changeBookingStatus(booking.id,'Reject')" nzDanger>Ablehnen</button>
                     </span>
 
                 </td>

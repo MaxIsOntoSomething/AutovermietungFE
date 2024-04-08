@@ -3,7 +3,7 @@
     <div class="parent">
       <div class="child">
         <div nz-row class="imgDiv">
-          <h2 style="margin-left: 230px">Post Car</h2>
+          <h2 style="margin-left: 230px">Auto Anlegen</h2>
         </div>
 
         <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
@@ -34,12 +34,12 @@
                 <nz-form-control
                   nzHasFeedback
                   [nzXs]="24"
-                  nzErrorTip="This Input Is Required!"
+                  nzErrorTip="Required!"
                 >
                   <nz-select
                     nzShowSearch
                     nzAllowClear
-                    nzPlaceHolder="Select a Brand Name"
+                    nzPlaceHolder="Marke auswählen"
                     formControlName="brand"
                   >
                     <nz-option
@@ -56,7 +56,7 @@
                 <nz-form-control
                   nzHasFeedback
                   [nzXs]="24"
-                  nzErrorTip="This Input Is Required!"
+                  nzErrorTip="Required!"
                 >
                   <input nz-input placeholder="Name" formControlName="name" />
                 </nz-form-control>
@@ -64,11 +64,11 @@
             </div>
             <div nz-col nzSpan="24">
               <nz-form-item>
-                <nz-form-control nzErrorTip="This Input Is Required!">
+                <nz-form-control nzErrorTip="Required!">
                   <nz-select
                     nzShowSearch
                     nzAllowClear
-                    nzPlaceHolder="Select a Type"
+                    nzPlaceHolder="Typ auswählen"
                     formControlName="type"
                   >
                     <nz-option
@@ -82,11 +82,11 @@
             </div>
             <div nz-col nzSpan="24">
               <nz-form-item>
-                <nz-form-control nzErrorTip="This Input Is Required!">
+                <nz-form-control nzErrorTip="Required!">
                   <nz-select
                     nzShowSearch
                     nzAllowClear
-                    nzPlaceHolder="Select a Transmission"
+                    nzPlaceHolder="Getriebe auswählen"
                     formControlName="transmission"
                   >
                     <nz-option
@@ -100,11 +100,11 @@
             </div>
             <div nz-col nzSpan="24">
               <nz-form-item>
-                <nz-form-control nzErrorTip="This Input Is Required!">
+                <nz-form-control nzErrorTip="Required!">
                   <nz-select
                     nzShowSearch
                     nzAllowClear
-                    nzPlaceHolder="Select a Color"
+                    nzPlaceHolder="Farbe auswählen"
                     formControlName="color"
                   >
                     <nz-option
@@ -121,11 +121,11 @@
                 <nz-form-control
                   nzHasFeedback
                   [nzXs]="24"
-                  nzErrorTip="This Input Is Required!"
+                  nzErrorTip="Required!"
                 >
                   <nz-year-picker
                     style="width: 100%"
-                    nzPlaceHolder="Model Year"
+                    nzPlaceHolder="Model Jahr"
                     formControlName="year"
                   ></nz-year-picker>
                 </nz-form-control>
@@ -136,9 +136,9 @@
                 <nz-form-control
                   nzHasFeedback
                   [nzXs]="24"
-                  nzErrorTip="This Input Is Required!"
+                  nzErrorTip="Required!"
                 >
-                  <input nz-input placeholder="Price" formControlName="price" />
+                  <input nz-input placeholder="Preis" formControlName="price" />
                 </nz-form-control>
               </nz-form-item>
             </div>
@@ -147,12 +147,12 @@
                 <nz-form-control
                   nzHasFeedback
                   [nzXs]="24"
-                  nzErrorTip="This Input Is Required!"
+                  nzErrorTip="Required!"
                 >
                   <textarea
                     rows="1"
                     nz-input
-                    placeholder="Description"
+                    placeholder="Beschreibung"
                     formControlName="description"
                   ></textarea>
                 </nz-form-control>
@@ -165,7 +165,7 @@
             class="login-form-button login-form-margin"
             [nzType]="'primary'"
           >
-            Post
+            Auto anlegen
           </button>
         </form>
       </div>
