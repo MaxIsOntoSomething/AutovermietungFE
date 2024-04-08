@@ -11,7 +11,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 export class GetBookingsComponent implements OnInit {
 
   size: NzButtonSize = 'large';
-  isSpinning: boolean;
+  isSpinning!: boolean;
   bookings: any
 
   constructor(private message: NzMessageService,
