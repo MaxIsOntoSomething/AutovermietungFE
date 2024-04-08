@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
     this.cars = [];
     this.adminService.getAllCars().subscribe((res) => {
       console.log(res);
-      res.forEach(element => {
+      res.forEach((element: any) => {
         element.processedImg = 'data:image/jpeg;base64,' + element.returnedImg;
         this.cars.push(element);
       });
