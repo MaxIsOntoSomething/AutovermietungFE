@@ -60,14 +60,14 @@ export class UpdateCarComponent implements OnInit {
     if (this.imgChanged && this.selectedFile) {
       formData.append('img', this.selectedFile);
     }
-    formData.append('brand', this.validateForm.get('brand').value);
-    formData.append('name', this.validateForm.get('name').value);
-    formData.append('type', this.validateForm.get('type').value);
-    formData.append('color', this.validateForm.get('color').value);
-    formData.append('year', this.validateForm.get('year').value);
-    formData.append('transmission', this.validateForm.get('transmission').value);
-    formData.append('description', this.validateForm.get('description').value);
-    formData.append('price', this.validateForm.get('price').value);
+    formData.append('brand', this.validateForm.get('brand')?.value);
+    formData.append('name', this.validateForm.get('name')?.value);
+    formData.append('type', this.validateForm.get('type')?.value);
+    formData.append('color', this.validateForm.get('color')?.value);
+    formData.append('year', this.validateForm.get('year')?.value);
+    formData.append('transmission', this.validateForm.get('transmission')?.value);
+    formData.append('description', this.validateForm.get('description')?.value);
+    formData.append('price', this.validateForm.get('price')?.value);
     console.log(formData);
     this.adminService.putCarByCarId(this.carId, formData).subscribe((res) => {
       this.isSpinning = false;
