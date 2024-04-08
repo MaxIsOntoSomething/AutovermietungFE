@@ -24,7 +24,7 @@ export class CustomerService {
       );
   }
 
-  getCarByCarId(carId): Observable<any> {
+  getCarByCarId(carId:any): Observable<any> {
     return this.http
       .get<[]>(BASIC_URL + `api/customer/car/${carId}`, {
         headers: this.createAuthorizationHeader(),
