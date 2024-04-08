@@ -41,7 +41,7 @@ export class SearchCarComponent implements OnInit {
     console.log(this.validateForm.value);
     this.isSpinning = true;
     this.adminService.searchCar(this.validateForm.value).subscribe((res) => {
-      res.carDtoList.forEach((element: any) => {
+      res.carDtoList.forEach(element => {
         element.processedImg = 'data:image/jpeg;base64,' + element.returnedImg;
         this.cars.push(element);
       });
