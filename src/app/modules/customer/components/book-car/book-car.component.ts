@@ -49,7 +49,7 @@ export class BookCarComponent implements OnInit {
     const obj = {
       fromDate: formData.fromDate,
       toDate: formData.toDate,
-      userId: UserStorageService.getUserId(),
+      userId: UserStorageService.getUserId()
     }
     this.customerService.bookACar(this.carId, obj).subscribe((res) => {
       this.isSpinning = false;
@@ -68,7 +68,7 @@ export class BookCarComponent implements OnInit {
         )
     });
   }
-  
+
 }
 
 

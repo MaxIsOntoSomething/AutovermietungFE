@@ -2,7 +2,6 @@
     <nz-table #basicTable [nzData]="bookings" [nzPageSize]="20" [nzShowPagination]="'false'">
         <thead>
             <tr>
-                <th style="font-weight: bolder; color: #003973;">Username</th>
                 <th style="font-weight: bolder; color: #003973;">Email</th>
                 <th style="font-weight: bolder; color: #003973;">Von</th>
                 <th style="font-weight: bolder; color: #003973;">Bis</th>
@@ -14,12 +13,11 @@
         </thead>
         <tbody>
             <tr *ngFor="let booking of basicTable.data">
-                <td>{{booking.username}}</td>
                 <td>{{booking.email}}</td>
-                <td>{{booking.fromDate | date: 'MMM d, y'}}</td>
-                <td>{{booking.toDate | date: 'MMM d, y'}}</td>
+                <td>{{booking.fromDate | date: 'd. MMM yyyy'}}</td>
+                <td>{{booking.toDate | date: 'd. MMM yyyy'}}</td>
                 <td>{{booking.days}}</td>
-                <td>{{booking.price}}</td>
+                <td>{{booking.price}} €</td>
                 <td>
                     <strong
                         [ngStyle]="{'color': booking.bookCarStatus === 'APPROVED' ? 'green' : booking.bookCarStatus === 'REJECTED' ? 'blue' : 'red'}">
@@ -30,7 +28,7 @@
 
                     <span *ngIf="booking.bookCarStatus == 'PENDING'">
                         <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary"
-                            (click)="changeBookingStatus(booking.id,'Approve')" nzDanger>Genehmingen</button>
+                            (click)="changeBookingStatus(booking.id,'Approve')" nzSuccess>Genehmingen</button>
                         <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary"
                             (click)="changeBookingStatus(booking.id,'Reject')" nzDanger>Ablehnen</button>
                     </span>
