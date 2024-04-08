@@ -43,15 +43,15 @@ export class AddCarComponent implements OnInit {
   submitForm(): void {
     this.isSpinning = true;
     const formData: FormData = new FormData();
-    formData.append('img', this.selectedFile);
-    formData.append('brand', this.validateForm.get('brand').value);
-    formData.append('name', this.validateForm.get('name').value);
-    formData.append('type', this.validateForm.get('type').value);
-    formData.append('color', this.validateForm.get('color').value);
-    formData.append('year', this.validateForm.get('year').value);
-    formData.append('transmission', this.validateForm.get('transmission').value);
-    formData.append('description', this.validateForm.get('description').value);
-    formData.append('price', this.validateForm.get('price').value);
+    formData.append('img', new Blob()); // Füge ein leeres Blob-Objekt hinzu (anstelle von this.selectedFile)
+    formData.append('brand', this.validateForm.get('brand')?.value);
+    formData.append('name', this.validateForm.get('name')?.value);
+    formData.append('type', this.validateForm.get('type')?.value);
+    formData.append('color', this.validateForm.get('color')?.value);
+    formData.append('year', this.validateForm.get('year')?.value);
+    formData.append('transmission', this.validateForm.get('transmission')?.value);
+    formData.append('description', this.validateForm.get('description')?.value);
+    formData.append('price', this.validateForm.get('price')?.value);
     console.log(formData);
     this.adminService.addCar(formData).subscribe((res) => {
       this.isSpinning = false;
@@ -76,12 +76,19 @@ export class AddCarComponent implements OnInit {
     this.previewImage();
   }
 
-  previewImage() {
+ previewImage() {
+  if (this.selectedFile) {
     const reader = new FileReader();
     reader.onload = () => {
       this.imagePreview = reader.result;
     };
     reader.readAsDataURL(this.selectedFile);
+  } else {
+    console.error('No file selected');
   }
-
+ }
 }
+ 
+
+
+
