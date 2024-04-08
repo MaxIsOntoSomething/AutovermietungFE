@@ -18,7 +18,7 @@ export class UserDashboradComponent implements OnInit {
 
   getAllCars() {
     this.customerService.getAllCars().subscribe((res) => {
-      res.forEach(element => {
+      res.forEach((element :any)=> {
         element.processedImg = 'data:image/jpeg;base64,' + element.returnedImg;
         this.cars.push(element);
       });
