@@ -18,11 +18,11 @@ export class UpdateCarComponent implements OnInit {
   existingImage: string | null = null;
   isSpinning = false;
   validateForm!: FormGroup;
-  listOfBrands = ["BMW", "AUDI", "FERRARI", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
-  listOfType = ["Petrol", "Hybrid", "Diesel", "Electric", "CNG"];
-  listOfColor = ["Red", "White", "Blue", "Black", "Orange", "Grey", "Silver"];
-  listOfTransmission = ["Manual", "Automatic"];
-  listOfStatus = ["Available", "Booked"];
+  listOfBrands = ["BMW", "AUDI", "FERRARI", "PORSCHE", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
+  listOfType = ["Benzin", "Hybrid", "Diesel", "Elektro", "Wasserstoff"];
+  listOfColor = ["Rot", "Weiß", "Blau", "Schwarz", "Orange", "Grau", "Silber", "Gelb", "Grün"];
+  listOfTransmission = ["Schaltgetriebe", "Automatik"];
+  listOfStatus = ["Verfügbar", "Gebucht"];
 
 
   constructor(private fb: FormBuilder,

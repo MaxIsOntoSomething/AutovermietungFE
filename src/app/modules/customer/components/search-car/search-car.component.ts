@@ -10,10 +10,10 @@ import { CustomerService } from "../../../customer/service/customer.service"
 })
 export class SearchCarComponent implements OnInit {
 
-  listOfBrands = ["BMW", "AUDI", "FERRARI", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
-  listOfType = ["Petrol", "Hybrid", "Diesel", "Electric", "CNG"];
-  listOfColor = ["Red", "White", "Blue", "Black", "Orange", "Grey", "Silver"];
-  listOfTransmission = ["Manual", "Automatic"];
+  listOfBrands = ["BMW", "AUDI", "FERRARI", "PORSCHE", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
+  listOfType = ["Benzin", "Hybrid", "Diesel", "Elektro", "Wasserstoff"];
+  listOfColor = ["Rot", "Weiß", "Blau", "Schwarz", "Orange", "Grau", "Silber", "Gelb", "Grün"];
+  listOfTransmission = ["Schaltgetriebe", "Automatik"];
   isSpinning = false;
   size: NzButtonSize = 'large';
   validateForm!: FormGroup;
