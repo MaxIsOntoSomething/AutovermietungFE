@@ -17,6 +17,7 @@ import "./chunk-S65YUVBS.js";
 import {
   NzNoAnimationDirective
 } from "./chunk-OS7WNKUU.js";
+import "./chunk-3SLM5ZU6.js";
 import {
   NzOutletModule,
   NzStringTemplateOutletDirective
@@ -24,7 +25,6 @@ import {
 import {
   zoomBigMotion
 } from "./chunk-ICKY2LCR.js";
-import "./chunk-3SLM5ZU6.js";
 import "./chunk-K36WNA65.js";
 import "./chunk-IPPEB47H.js";
 import "./chunk-NHV2VFZ5.js";

@@ -1,6 +1,11 @@
 import {
   NzNoAnimationDirective
 } from "./chunk-OS7WNKUU.js";
+import "./chunk-3SLM5ZU6.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-R3QM2YRV.js";
 import {
   NzOutletModule,
   NzStringTemplateOutletDirective
@@ -8,11 +13,6 @@ import {
 import {
   collapseMotion
 } from "./chunk-ICKY2LCR.js";
-import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-R3QM2YRV.js";
-import "./chunk-3SLM5ZU6.js";
 import "./chunk-K36WNA65.js";
 import "./chunk-IPPEB47H.js";
 import "./chunk-NHV2VFZ5.js";

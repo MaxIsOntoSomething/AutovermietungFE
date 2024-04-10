@@ -1,4 +1,8 @@
 import {
+  NzCheckboxComponent,
+  NzCheckboxModule
+} from "./chunk-G5KZSSY4.js";
+import {
   NzEmbedEmptyComponent,
   NzEmptyModule
 } from "./chunk-4FLPMMBF.js";
@@ -6,39 +10,29 @@ import {
   NzI18nService
 } from "./chunk-CYKOKOFZ.js";
 import "./chunk-ZJQJU6RG.js";
-import {
-  NzCheckboxComponent,
-  NzCheckboxModule
-} from "./chunk-ZUV4QNAZ.js";
 import "./chunk-TS2R7L65.js";
 import {
   NzFormNoStatusService,
   NzFormStatusService
 } from "./chunk-AYTLGSTN.js";
-import "./chunk-UPCYC7TG.js";
-import "./chunk-S65YUVBS.js";
-import "./chunk-PJALVHVO.js";
 import {
   NzButtonComponent,
   NzButtonModule
-} from "./chunk-ZMLD5KVQ.js";
-import {
-  NzTransitionPatchDirective
-} from "./chunk-EXHDORXA.js";
+} from "./chunk-TKMQNDCY.js";
 import {
   NzWaveDirective
 } from "./chunk-2TIVXG6W.js";
 import {
+  NzTransitionPatchDirective
+} from "./chunk-EXHDORXA.js";
+import "./chunk-UPCYC7TG.js";
+import "./chunk-S65YUVBS.js";
+import "./chunk-3SLM5ZU6.js";
+import {
   NzIconDirective,
   NzIconModule
 } from "./chunk-R3QM2YRV.js";
-import {
-  DefaultValueAccessor,
-  FormsModule,
-  NgControlStatus,
-  NgModel
-} from "./chunk-UK2JTVCN.js";
-import "./chunk-3SLM5ZU6.js";
+import "./chunk-PJALVHVO.js";
 import "./chunk-K36WNA65.js";
 import "./chunk-IPPEB47H.js";
 import "./chunk-NHV2VFZ5.js";
@@ -53,6 +47,12 @@ import {
   getStatusClassNames,
   toArray
 } from "./chunk-FIYCSCSW.js";
+import {
+  DefaultValueAccessor,
+  FormsModule,
+  NgControlStatus,
+  NgModel
+} from "./chunk-UK2JTVCN.js";
 import {
   NgClass,
   NgForOf,

@@ -8,21 +8,21 @@ import {
   NzRowDirective
 } from "./chunk-J46JJCRC.js";
 import {
+  NzAvatarComponent,
+  NzAvatarModule
+} from "./chunk-DT7S2LFS.js";
+import {
   NzEmbedEmptyComponent,
   NzEmptyModule
 } from "./chunk-4FLPMMBF.js";
 import "./chunk-CYKOKOFZ.js";
 import "./chunk-ZJQJU6RG.js";
-import {
-  NzAvatarComponent,
-  NzAvatarModule
-} from "./chunk-DT7S2LFS.js";
 import "./chunk-S65YUVBS.js";
+import "./chunk-R3QM2YRV.js";
 import {
   NzOutletModule,
   NzStringTemplateOutletDirective
 } from "./chunk-PJALVHVO.js";
-import "./chunk-R3QM2YRV.js";
 import "./chunk-IPPEB47H.js";
 import "./chunk-NHV2VFZ5.js";
 import {

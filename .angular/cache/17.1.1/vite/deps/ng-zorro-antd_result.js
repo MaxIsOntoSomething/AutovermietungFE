@@ -1,11 +1,11 @@
 import {
-  NzOutletModule,
-  NzStringTemplateOutletDirective
-} from "./chunk-PJALVHVO.js";
-import {
   NzIconDirective,
   NzIconModule
 } from "./chunk-R3QM2YRV.js";
+import {
+  NzOutletModule,
+  NzStringTemplateOutletDirective
+} from "./chunk-PJALVHVO.js";
 import "./chunk-IPPEB47H.js";
 import "./chunk-NHV2VFZ5.js";
 import "./chunk-7DT4LV2Y.js";
