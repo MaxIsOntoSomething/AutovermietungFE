@@ -9,7 +9,7 @@ import { UserStorageService } from './auth/services/storage/user-storage.service
 })
 export class AppComponent {
 
-
+// Ist Customer oder Admin eingeloggt?
   isCustomerLoggedIn: boolean = UserStorageService.isCustomerLoggedIn();
   isAdminLoggedIn: boolean = UserStorageService.isAdminLoggedIn();
 

@@ -1,17 +1,29 @@
+<!-- Äußerstes div mit einer spezifischen Hintergrundfarbe -->
 <div class="bg" style="background-color: #F8F8F8;">
+  <!-- nz-spin ist eine Komponente von NG-ZORRO, einer UI-Bibliothek für Angular. Sie wird verwendet, um einen Lade-Spinner anzuzeigen. -->
   <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
 
+    <!-- Das Eltern-div für das Login-Formular -->
     <div class="parent">
+      <!-- Das Kind-div für das Login-Formular -->
       <div class="child">
+        <!-- nz-row ist eine Layout-Komponente von NG-ZORRO, die für Rasterlayouts verwendet wird. -->
         <div nz-row class="imgDiv">
+          <!-- nz-col ist eine weitere Layout-Komponente von NG-ZORRO, die zur Definition von Spalten innerhalb einer Zeile verwendet wird. -->
           <div nz-col nzSpan="24">
+            <!-- Die Überschrift für das Login -->
             <h1 style="margin-left: 100px;">Login</h1>
           </div>
         </div>
+        <!-- Das Login-Formular. Es verwendet das Reactive Forms Modul von Angular. -->
         <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+          <!-- nz-form-item ist eine Komponente von NG-ZORRO, die zur Umschließung von Formularsteuerelementen verwendet wird. -->
           <nz-form-item>
+            <!-- nz-form-control ist eine weitere Komponente von NG-ZORRO, die zur Umschließung eines Formularsteuerelements verwendet wird. -->
             <nz-form-control nzErrorTip="Email eingeben">
+              <!-- nz-input-group ist eine Komponente von NG-ZORRO, die zur Gruppierung von Eingabeelementen verwendet wird. -->
               <nz-input-group nzPrefixIcon="user">
+                <!-- Ein Eingabefeld für die E-Mail-Adresse -->
                 <input type="text" nz-input formControlName="email" placeholder="Email" />
               </nz-input-group>
             </nz-form-control>
@@ -19,12 +31,15 @@
           <nz-form-item>
             <nz-form-control nzErrorTip="Passwort eingeben!">
               <nz-input-group nzPrefixIcon="lock">
+                <!-- Ein Eingabefeld für das Passwort -->
                 <input type="password" nz-input formControlName="password" placeholder="Passwort" />
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
 
+          <!-- Ein Button zum Absenden des Formulars -->
           <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Einloggen</button>
+          <!-- Ein Link zur Registrierungsseite -->
           Oder <a routerLink="/register"> Jetzt registrieren </a>
         </form>
       </div>

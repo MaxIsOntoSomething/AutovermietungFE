@@ -1,9 +1,11 @@
+// Importieren der benötigten Module und Services
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdminService } from '../../admin-services/admin.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
+// Deklaration der Komponente mit Metadaten
 @Component({
   selector: 'app-add-car',
   templateUrl: './add-car.component.html',
@@ -11,22 +13,27 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 })
 export class AddCarComponent implements OnInit {
 
+  // Deklaration der Formular-Gruppe, des ausgewählten Bildes, des Bildvorschau-Strings und des Lade-Indikators
   validateForm!: FormGroup;
   selectedFile!: File | null;
   imagePreview!: string | ArrayBuffer | null;
   isSpinning = false;
-  listOfOption: Array<{ label: string; value: string }> = [];
+
+  // Listen für die Dropdown-Optionen
   listOfBrands = ["BMW", "AUDI", "FERRARI", "PORSCHE", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
   listOfType = ["Benzin", "Hybrid", "Diesel", "Elektro", "Wasserstoff"];
   listOfColor = ["Rot", "Weiß", "Blau", "Schwarz", "Orange", "Grau", "Silber", "Gelb", "Grün"];
   listOfTransmission = ["Schaltgetriebe", "Automatik"];
 
+  // Konstruktor der Komponente, in dem die benötigten Services injiziert werden
   constructor(private fb: FormBuilder,
     private message: NzMessageService,
     private router: Router,
     private adminService: AdminService) { }
 
+  // Lifecycle-Hook, der beim Initialisieren der Komponente aufgerufen wird
   ngOnInit(): void {
+    // Initialisierung der Formular-Gruppe
     this.validateForm = this.fb.group({
       brand: [null, [Validators.required]],
       name: [null, [Validators.required]],
@@ -39,9 +46,11 @@ export class AddCarComponent implements OnInit {
     });
   }
 
-
+  // Methode, die beim Absenden des Formulars aufgerufen wird
   submitForm(): void {
+    // Starten des Lade-Indikators
     this.isSpinning = true;
+    // Erstellen eines FormData-Objekts und Hinzufügen der Formulardaten
     const formData: FormData = new FormData();
     formData.append('img', new Blob()); // Füge ein leeres Blob-Objekt hinzu (anstelle von this.selectedFile)
     formData.append('brand', this.validateForm.get('brand')?.value);
@@ -52,43 +61,35 @@ export class AddCarComponent implements OnInit {
     formData.append('transmission', this.validateForm.get('transmission')?.value);
     formData.append('description', this.validateForm.get('description')?.value);
     formData.append('price', this.validateForm.get('price')?.value);
-    console.log(formData);
+    // Aufruf des addCar-Services mit den Formulardaten
     this.adminService.addCar(formData).subscribe((res) => {
+      // Beenden des Lade-Indikators
       this.isSpinning = false;
-      console.log(res);
-      this.message
-        .success(
-          `Car Posted Successfully`,
-          { nzDuration: 5000 }
-        );
+      // Anzeige einer Erfolgsmeldung und Weiterleitung zur Dashboard-Seite
+      this.message.success(`Car Posted Successfully`, { nzDuration: 5000 });
       this.router.navigateByUrl('/admin/dashboard');
     }, error => {
-      this.message
-        .error(
-          `${error.error}`,
-          { nzDuration: 5000 }
-        )
+      // Anzeige einer Fehlermeldung, wenn das Hinzufügen des Autos fehlgeschlagen ist
+      this.message.error(`${error.error}`, { nzDuration: 5000 });
     });
   }
 
+  // Methode, die aufgerufen wird, wenn eine Datei ausgewählt wird
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
     this.previewImage();
   }
 
- previewImage() {
-  if (this.selectedFile) {
-    const reader = new FileReader();
-    reader.onload = () => {
-      this.imagePreview = reader.result;
-    };
-    reader.readAsDataURL(this.selectedFile);
-  } else {
-    console.error('No file selected');
+  // Methode zum Erstellen einer Vorschau des ausgewählten Bildes
+  previewImage() {
+    if (this.selectedFile) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imagePreview = reader.result;
+      };
+      reader.readAsDataURL(this.selectedFile);
+    } else {
+      console.error('No file selected');
+    }
   }
- }
 }
-
-
-
-

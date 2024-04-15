@@ -1,3 +1,4 @@
+// Importieren der benötigten Module und Komponenten
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomerGuard } from "../../auth/guards/authCustomer/customer.guard";
@@ -6,6 +7,7 @@ import { MyBookingsComponent } from './components/my-bookings/my-bookings.compon
 import { SearchCarComponent } from './components/search-car/search-car.component';
 import { UserDashboradComponent } from "../../modules/customer/components/user-dashboard/user-dashborad.component";
 
+// Definition der Routen
 const routes: Routes = [
   { path: 'dashboard', component: UserDashboradComponent, canActivate: [CustomerGuard] },
   { path: 'book/:carId', component: BookCarComponent, canActivate: [CustomerGuard] },
@@ -13,6 +15,7 @@ const routes: Routes = [
   { path: 'search', component: SearchCarComponent, canActivate: [CustomerGuard] },
 ];
 
+// Deklaration des Moduls mit Metadaten
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

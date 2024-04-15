@@ -1,3 +1,4 @@
+// Importieren der benötigten Module und Komponenten
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
@@ -9,7 +10,7 @@ import { SearchCarComponent } from './components/search-car/search-car.component
 import { GetBookingsComponent } from './components/get-bookings/get-bookings.component';
 import { DemoNgZorroAntdModule } from '../../DemoNgZorroAntdModule';
 
-
+// Deklaration des Moduls mit Metadaten
 @NgModule({
   declarations: [
     DashboardComponent,

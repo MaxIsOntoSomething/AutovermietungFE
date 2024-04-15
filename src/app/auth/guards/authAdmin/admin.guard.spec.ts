@@ -6,11 +6,13 @@ describe('AdminGuard', () => {
   let guard: AdminGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    guard = TestBed.inject(AdminGuard);
+    TestBed.configureTestingModule({}); // Überprüft, ob der Guard erstellt werden kann
+    guard = TestBed.inject(AdminGuard); // Erstellt den Guard
   });
 
-  it('should be created', () => {
-    expect(guard).toBeTruthy();
-  });
+  it('should be created', () => { // Überprüft, ob der Guard erstellt wurde
+    expect(guard).toBeTruthy(); // Erwartet, dass der Guard erstellt wurde
+  }); 
 });
+
+

@@ -2,11 +2,11 @@ import { TestBed } from '@angular/core/testing';
 
 import { NoAuthGuard } from './no-auth.guard';
 
-describe('NoAuthGuard', () => {
+describe('NoAuthGuard', () => { 
   let guard: NoAuthGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({}); 
     guard = TestBed.inject(NoAuthGuard);
   });
 

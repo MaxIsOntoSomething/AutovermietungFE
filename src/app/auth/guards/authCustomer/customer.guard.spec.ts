@@ -6,8 +6,8 @@ describe('CustomerGuard', () => {
   let guard: CustomerGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    guard = TestBed.inject(CustomerGuard);
+    TestBed.configureTestingModule({}); // Überprüft, ob der Guard erstellt werden kann
+    guard = TestBed.inject(CustomerGuard); // Erstellt den Guard
   });
 
   it('should be created', () => {

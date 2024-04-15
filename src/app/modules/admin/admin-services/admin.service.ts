@@ -1,19 +1,23 @@
+// Importieren der benötigten Module und Services
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, of, tap } from 'rxjs';
 import { environment } from "../../../../environments/environment"
 import { UserStorageService } from "../../../auth/services/storage/user-storage.service";
 
+// Basis-URL aus der Umgebungsdatei
 const BASIC_URL = environment['BASIC_URL'];
 
+// Deklaration des Services mit Metadaten
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
 
+  // Konstruktor des Services, in dem der HttpClient injiziert wird
   constructor(private http: HttpClient,) { }
 
-
+  // Methode zum Hinzufügen eines Autos
   addCar(carDto: any): Observable<any> {
     return this.http
       .post<[]>(BASIC_URL + "api/admin/car", carDto, {
@@ -25,6 +29,7 @@ export class AdminService {
       );
   }
 
+  // Methode zum Abrufen aller Autos
   getAllCars(): Observable<any> {
     return this.http
       .get<[]>(BASIC_URL + `api/admin/cars`, {
@@ -36,6 +41,7 @@ export class AdminService {
       );
   }
 
+  // Methode zum Abrufen eines Autos anhand der Auto-ID
   getCarByCarId(carId:any): Observable<any> {
     return this.http
       .get<[]>(BASIC_URL + `api/admin/car/${carId}`, {
@@ -47,6 +53,7 @@ export class AdminService {
       );
   }
 
+  // Methode zum Aktualisieren eines Autos anhand der Auto-ID
   putCarByCarId(carId: any, carDto: any): Observable<any> {
     return this.http
       .put<[]>(BASIC_URL + `api/admin/car/${carId}`, carDto, {
@@ -58,7 +65,7 @@ export class AdminService {
       );
   }
 
-
+  // Methode zum Löschen eines Autos anhand der Auto-ID
   deleteCarByCarId(carId: any): Observable<any> {
     return this.http
       .delete<[]>(BASIC_URL + `api/admin/car/${carId}`, {
@@ -70,6 +77,7 @@ export class AdminService {
       );
   }
 
+  // Methode zum Suchen von Autos
   searchCar(searchCarDto: any): Observable<any> {
     return this.http
       .post<[]>(BASIC_URL + "api/admin/car/search", searchCarDto, {
@@ -81,6 +89,7 @@ export class AdminService {
       );
   }
 
+  // Methode zum Abrufen aller Buchungen
   getBookings(): Observable<any> {
     return this.http
       .get<[]>(BASIC_URL + `api/admin/car/bookings`, {
@@ -92,6 +101,7 @@ export class AdminService {
       );
   }
 
+  // Methode zum Ändern des Buchungsstatus
   changeBookingStatus(bookingId: number, status: string): Observable<any> {
     return this.http
       .get<[]>(BASIC_URL + `api/admin/car/booking/${bookingId}/${status}`, {
@@ -103,6 +113,7 @@ export class AdminService {
       );
   }
 
+  // Methode zum Erstellen des Authentifizierungsheaders
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders: HttpHeaders = new HttpHeaders();
     return authHeaders.set(
@@ -111,20 +122,18 @@ export class AdminService {
     );
   }
 
+  // Hilfsmethode zum Loggen von Nachrichten
   log(message: string): void {
     console.log(`User Auth Service: ${message}`);
   }
 
+  // Methode zum Behandeln von Fehlern in HTTP-Anfragen
   handleError<T>(operation = 'operation', result?: T): any {
     return (error: any): Observable<T> => {
-
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
-
-      // TODO: better job of transforming error for user consumption
+      // Loggt den Fehler und gibt eine Fehlermeldung aus
+      console.error(error);
       this.log(`${operation} failed: ${error.message}`);
-
-      // Let the app keep running by returning an empty result.
+      // Lässt die App weiterlaufen, indem ein leeres Ergebnis zurückgegeben wird
       return of(result as T);
     };
   }

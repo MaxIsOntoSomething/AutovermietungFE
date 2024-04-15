@@ -6,7 +6,7 @@ import { UserStorageService } from '../../services/storage/user-storage.service'
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerGuard implements CanActivate {
+export class CustomerGuard implements CanActivate { // Überprüft, ob der Kunde eingeloggt ist
   
   constructor(private router: Router,
     private notification: NzNotificationService,) {}
